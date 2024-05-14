@@ -21,7 +21,7 @@
         <td style="text-align: center" th:text="${user.getDepartment()}"></td>
         <td style="text-align: center" th:text="${user.getSalary()}"></td>
         <td style="text-align: center" th:text="${user.getEmail()}"></td>
-        <td style="text-align: center" th:each="role : ${user.getRoles()}" th:text="${role.getName()}"></td>
+        <td style="text-align: center" th:each="role : ${user.getRoles()}" th:text="${role.getName().replace('ROLE_', '') + ''}"></td>
     </tr>
 </table>
 
